@@ -1,0 +1,339 @@
+/* Dashboard specific styles */
+
+/* Dashboard Cards */
+.stats-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+    height: 100%;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.stats-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.25rem 1.85rem 0 rgba(58, 59, 69, 0.2);
+}
+
+.stats-card-icon {
+    display: inline-flex;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.stats-card-title {
+    color: #6c757d;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.stats-card-value {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+.stats-card-trend {
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+}
+
+.stats-card-trend i {
+    margin-right: 0.35rem;
+}
+
+.trend-up {
+    color: #28a745;
+}
+
+.trend-down {
+    color: #dc3545;
+}
+
+/* Card grids */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.cards .col-md-3,
+.cards .col-md-4,
+.cards .col-md-6 {
+    margin-bottom: 1.25rem;
+}
+
+/* Chart containers */
+.chart-container {
+    position: relative;
+    margin-bottom: 1.5rem;
+    background: #fff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+}
+
+.chart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.25rem;
+}
+
+.chart-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.chart-controls {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+    z-index: 10;
+}
+
+.chart-link {
+    margin-right: 15px;
+    cursor: pointer;
+    color: #93A3AB;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.chart-link:hover,
+.chart-link.active {
+    color: #0561FC;
+}
+
+/* Filter sections */
+.filter-section {
+    background-color: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+}
+
+.filter-section .form-label {
+    color: #6c757d;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.filter-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 1.25rem;
+}
+
+/* Status badges */
+.badge-light-primary {
+    background-color: rgba(5, 97, 252, 0.1);
+    color: #0561FC;
+}
+
+.badge-light-success {
+    background-color: rgba(40, 167, 69, 0.1);
+    color: #28a745;
+}
+
+.badge-light-warning {
+    background-color: rgba(255, 193, 7, 0.1);
+    color: #ffc107;
+}
+
+.badge-light-danger {
+    background-color: rgba(220, 53, 69, 0.1);
+    color: #dc3545;
+}
+
+.badge-light-info {
+    background-color: rgba(23, 162, 184, 0.1);
+    color: #17a2b8;
+}
+
+/* Tab Navigation */
+.nav-tabs {
+    border-bottom: 2px solid #e9ecef;
+    margin-bottom: 1.25rem;
+}
+
+.nav-tabs .nav-link {
+    border: none;
+    color: #6c757d;
+    padding: 0.75rem 1rem;
+    margin-right: 0.5rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.nav-tabs .nav-link:hover {
+    color: #0561FC;
+    border-bottom: 2px solid #e9ecef;
+}
+
+.nav-tabs .nav-link.active {
+    color: #0561FC;
+    border-bottom: 2px solid #0561FC;
+    background-color: transparent;
+}
+
+/* Analytics Components */
+.analytics-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+    height: 100%;
+    margin-bottom: 1.5rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.analytics-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.25rem 1.85rem 0 rgba(58, 59, 69, 0.2);
+}
+
+.analytics-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.25rem;
+}
+
+.analytics-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #495057;
+    margin: 0;
+}
+
+.analytics-value {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #212529;
+    margin: 0.75rem 0;
+}
+
+.analytics-trend {
+    display: flex;
+    align-items: center;
+    font-size: 0.85rem;
+}
+
+.analytics-trend.positive {
+    color: #28a745;
+}
+
+.analytics-trend.negative {
+    color: #dc3545;
+}
+
+.analytics-trend i {
+    margin-right: 0.35rem;
+}
+
+/* Data tables */
+.data-table {
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.data-table thead th {
+    background-color: #f8f9fa;
+    color: #495057;
+    font-weight: 600;
+    padding: 1rem;
+    border-top: none;
+    border-bottom: 2px solid #e9ecef;
+}
+
+.data-table tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+.data-table tbody tr:hover {
+    background-color: rgba(5, 97, 252, 0.03);
+}
+
+.data-table tbody td {
+    padding: 1rem;
+    vertical-align: middle;
+    border-color: #e9ecef;
+}
+
+/* Date Range Picker Customization */
+.daterangepicker {
+    border-radius: 8px;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    border: 1px solid #e0e0e0;
+    font-family: inherit;
+}
+
+.daterangepicker .ranges li {
+    border-radius: 4px;
+    color: #495057;
+}
+
+.daterangepicker .ranges li:hover {
+    background-color: #f1f3f5;
+}
+
+.daterangepicker .ranges li.active {
+    background-color: #0561FC;
+    color: #fff;
+}
+
+.daterangepicker td.active, 
+.daterangepicker td.active:hover {
+    background-color: #0561FC;
+    border-color: transparent;
+    color: #fff;
+}
+
+.daterangepicker td.in-range {
+    background-color: rgba(5, 97, 252, 0.1);
+    color: #495057;
+}
+
+/* Media Queries */
+@media (max-width: 992px) {
+    .cards {
+        flex-wrap: wrap;
+    }
+    
+    .stats-card {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .chart-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .chart-controls {
+        position: relative;
+        top: auto;
+        right: auto;
+        margin-top: 1rem;
+    }
+    
+    .filter-section {
+        padding: 1rem;
+    }
+    
+    .analytics-header {
+        flex-direction: column;
+    }
+}

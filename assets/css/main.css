@@ -1,0 +1,399 @@
+/* Main CSS styles for RotiSeri Bakery Management System */
+
+:root {
+    /* Primary color palette */
+    --primary: #0561FC;
+    --primary-light: rgba(5, 97, 252, 0.1);
+    --primary-dark: #0453d6;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    
+    /* Typography */
+    --font-family: 'Nunito', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --font-size-base: 0.9rem;
+    --font-weight-normal: 400;
+    --font-weight-bold: 600;
+    
+    /* Layout */
+    --border-radius: 8px;
+    --box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+    --sidebar-width: 250px;
+    --header-height: 70px;
+  }
+  
+  /* General Styles */
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family);
+    font-size: var(--font-size-base);
+    background-color: #f8f9fa;
+    color: #333;
+  }
+  
+  .wrapper {
+    display: flex;
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* Sidebar Styles */
+  .sidebar-container {
+    width: var(--sidebar-width);
+    height: 100vh;
+    background-color: white;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #eaecf0;
+    padding: 1.75rem 2rem;
+    z-index: 1000;
+    transition: all 0.3s;
+  }
+  
+  .header-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .logo-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    margin-right: 8px;
+  }
+  
+  .company-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 2rem;
+  }
+  
+  .company-text {
+    display: flex;
+    flex-direction: row;
+    gap: 0px;
+  }
+  
+  .company-name {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+  }
+  
+  .company-name2 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--primary);
+  }
+  
+  .nav-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+  }
+  
+  .nav-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0.85rem 0;
+    color: var(--secondary);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-radius: var(--border-radius);
+    margin-bottom: 0.3rem;
+    padding-left: 0.75rem;
+  }
+  
+  .nav-item:hover {
+    color: var(--primary);
+    background-color: var(--primary-light);
+    transform: translateX(3px);
+  }
+  
+  .nav-item.active {
+    color: var(--primary);
+    background-color: var(--primary-light);
+    font-weight: var(--font-weight-bold);
+  }
+  
+  .nav-icon {
+    font-size: 1.2rem;
+  }
+  
+  .nav-text {
+    font-size: 0.95rem;
+  }
+  
+  .footer-section {
+    margin-top: auto;
+    padding-top: 1.5rem;
+    border-top: 1px solid #eaecf0;
+  }
+  
+  .user-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: var(--dark);
+  }
+  
+  /* Main Content Area */
+  .main-content {
+    margin-left: var(--sidebar-width);
+    width: calc(100% - var(--sidebar-width));
+    padding: 2rem;
+    transition: all 0.3s;
+  }
+  
+  /* Cards & UI Elements */
+  .card {
+    background-color: white;
+    border-radius: var(--border-radius);
+    border: none;
+    box-shadow: var(--box-shadow);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    margin-bottom: 1.5rem;
+  }
+  
+  .card:hover {
+    box-shadow: 0 0.25rem 1.85rem 0 rgba(58, 59, 69, 0.2);
+  }
+  
+  .card-header {
+    background-color: white;
+    border-bottom: 1px solid #eaecf0;
+    padding: 1.2rem 1.5rem;
+    font-weight: var(--font-weight-bold);
+  }
+  
+  .card-body {
+    padding: 1.5rem;
+  }
+  
+  .table {
+    width: 100%;
+    margin-bottom: 0;
+  }
+  
+  .table th {
+    font-weight: var(--font-weight-bold);
+    color: var(--dark);
+    border-top: none;
+    padding: 1rem;
+  }
+  
+  .table td {
+    padding: 1rem;
+    vertical-align: middle;
+    color: var(--secondary);
+  }
+  
+  .table-hover tbody tr:hover {
+    background-color: rgba(0, 0, 0, 0.02);
+  }
+  
+  /* Button Styles */
+  .btn {
+    border-radius: var(--border-radius);
+    padding: 0.5rem 1rem;
+    font-weight: var(--font-weight-bold);
+    transition: all 0.2s;
+  }
+  
+  .btn-primary {
+    background-color: var(--primary);
+    border-color: var(--primary);
+  }
+  
+  .btn-primary:hover {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+    transform: translateY(-1px);
+  }
+  
+  .btn-outline-primary {
+    color: var(--primary);
+    border-color: var(--primary);
+  }
+  
+  .btn-outline-primary:hover {
+    background-color: var(--primary);
+    color: white;
+    transform: translateY(-1px);
+  }
+  
+  /* Dashboard Icon Cards */
+  .dashboard-icon-card {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  .dashboard-icon-card .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: var(--primary-light);
+    margin-bottom: 1.25rem;
+  }
+  
+  .dashboard-icon-card .icon i {
+    font-size: 1.25rem;
+    color: var(--primary);
+  }
+  
+  .dashboard-icon-card h4 {
+    font-size: 1.5rem;
+    font-weight: var(--font-weight-bold);
+    margin-bottom: 0.5rem;
+  }
+  
+  .dashboard-icon-card p {
+    margin-bottom: 0;
+    color: var(--secondary);
+  }
+  
+  /* Form Elements */
+  .form-control, .form-select {
+    border-radius: var(--border-radius);
+    padding: 0.65rem 0.85rem;
+    border-color: #ced4da;
+    font-size: 0.95rem;
+  }
+  
+  .form-control:focus, .form-select:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 0.15rem rgba(5, 97, 252, 0.25);
+  }
+  
+  .input-group .input-group-text {
+    background-color: white;
+    border-color: #ced4da;
+  }
+  
+  /* Status Badges */
+  .badge {
+    padding: 0.5em 0.7em;
+    font-weight: 500;
+    border-radius: 30px;
+  }
+  
+  .badge-low-stock {
+    background-color: var(--warning);
+    color: #212529;
+  }
+  
+  .badge-sufficient {
+    background-color: var(--success);
+    color: white;
+  }
+  
+  .badge-out-of-stock {
+    background-color: var(--danger);
+    color: white;
+  }
+  
+  /* Charts */
+  .chart-container {
+    position: relative;
+    height: 300px;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Responsive */
+  @media (max-width: 992px) {
+    .sidebar-container {
+      width: 70px;
+      padding: 1.5rem 0.75rem;
+    }
+    
+    .company-text, .nav-text, .user-profile {
+      display: none;
+    }
+    
+    .company-logo {
+      justify-content: center;
+    }
+    
+    .nav-item {
+      justify-content: center;
+      padding-left: 0;
+    }
+    
+    .main-content {
+      margin-left: 70px;
+      width: calc(100% - 70px);
+    }
+  }
+  
+  @media (min-width: 769px) and (max-width: 992px) {
+    .sidebar-container {
+      width: 70px !important;
+    }
+    /* Hide sidebar text and icons text for compact sidebar */
+    .company-text, .nav-text, .user-profile {
+      display: none;
+    }
+    .main-content {
+      margin-left: 70px !important;
+      width: calc(100% - 70px) !important;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .sidebar-container {
+      width: 100%;
+      height: auto;
+      position: relative;
+      padding: 1rem;
+    }
+    
+    .company-text, .nav-text {
+      display: block;
+    }
+    
+    .company-logo {
+      justify-content: flex-start;
+    }
+    
+    .nav-container {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    
+    .nav-item {
+      width: auto;
+      padding: 0.5rem 1rem;
+    }
+    
+    .main-content {
+      margin-left: 0;
+      width: 100%;
+      padding: 1rem;
+    }
+    
+    .wrapper {
+      flex-direction: column;
+    }
+    
+    .footer-section {
+      display: none;
+    }
+  }
